@@ -1,0 +1,24 @@
+{
+  "name": "pi-package",
+  "version": "1.0.0",
+  "description": "Custom Pi package for company CI/CD pipeline.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "report": "ts-node extensions/ci-reporter.ts"
+  },
+  "dependencies": {
+    "typescript": "^5.5.0",
+    "ts-node": "^10.9.1"
+  },
+  "pi": {
+    "skills": ["skills/code-reviewer/SKILL.md"],
+    "prompts": [
+      "prompts/review.md",
+      "prompts/test.md",
+      "prompts/security.md",
+      "prompts/deploy-check.md"
+    ],
+    "extensions": ["extensions/ci-reporter.ts"]
+  }
+}
